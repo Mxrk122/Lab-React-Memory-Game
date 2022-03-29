@@ -99,8 +99,9 @@ const App = () =>{
 
     return(
         <div className="app">
-            <h1>Heaby Metal Memory</h1>
+            <h1>Heavy Metal Memory</h1>
             <button onClick = {desordenar_cartas}>New Game</button>
+                <h2>{"Numero de turnos: " + turnos}</h2>
                 <div className = "tablero">
                 {//Utilizar map para argar todos los del JSON
                     cartas_en_juego.map( carta => (
@@ -119,7 +120,6 @@ const App = () =>{
                     ))
                 }
             </div>
-            <h1>{turnos}</h1>
         </div>
     )
 }

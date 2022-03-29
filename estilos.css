@@ -3,17 +3,58 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #000;
+}
+
+/*Efecto opacidad*/
+body::after {
+    content: "";
+    background-image: url("./wallpapers/cowboysfromhell\ Pantera.jpeg");
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+
+    transition: 5s;
+    animation-name: animation;
+    animation-direction: alternate-reverse;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+  }
+
+/*Wallpapers cambiantes*/
+@keyframes animation{
+    0%{
+        background-image: url("./wallpapers/cowboysfromhell\ Pantera.jpeg");
+    }
+    20%{
+        background-image: url("./wallpapers/darkforest.jpg");
+    }
+    40%{
+        background-image: url("./wallpapers/skull.jpg");
+    }
+    60%{
+        background-image: url("./wallpapers/guitar.jpg");
+    }
 }
 
 /*App*/
 .app{
     color: white;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+    color: #C10808;
 }
 
 .app > button{
+    font-family: 'Cinzel', serif;
     background: none;
     border-radius: 5px;
     border: 2px solid white;
@@ -29,6 +70,11 @@ body{
     margin: 0px;
 }
 
+.app > h2{
+    margin: 0px;
+    font-size: 15px;
+    padding: 5px;
+}
 
 /*Cartas y tablero*/
 .tablero{
@@ -41,7 +87,7 @@ body{
     padding: 20px;
 
     /*style*/
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
     overflow: hidden;
     color: #000;
 }
