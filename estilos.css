@@ -1,0 +1,80 @@
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+/*App*/
+.app{
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.app > button{
+    background: none;
+    border-radius: 5px;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 12px;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.app > h1{
+    margin: 0px;
+}
+
+
+/*Cartas y tablero*/
+.tablero{
+    /*Grid*/
+    display: grid;
+    grid-template-rows: repeat(4, 180.5px);
+    grid-template-columns: repeat(4, 320px);
+    grid-gap: 20px;
+    grid-auto-flow: row;
+    padding: 20px;
+
+    /*style*/
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    overflow: hidden;
+    color: #000;
+}
+
+img.arriba{
+    width: 320px;
+    height: 180.5px;
+}
+
+img.abajo{
+    width: 320px;
+    height: 180.5px;
+}
+
+/*PArte de arriba*/
+.carta .arriba{
+    transform: rotateY(90deg);
+    position: absolute;
+    transition: all ease-in 0.2s;    
+}
+
+.yes .arriba{
+    transform: rotateY(0deg);
+    transition: all ease-in 0.2s;
+}
+
+/*Parte de abajo*/
+.carta .abajo{
+    transition: all ease-in 0.2s; 
+    transition-delay: 0.2s;
+}
+
+.yes .abajo{
+    transform: rotateY(90deg);
+    transition-delay: 0;
+}
