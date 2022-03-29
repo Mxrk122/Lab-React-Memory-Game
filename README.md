@@ -1,2 +1,2 @@
 # Lab-React-Memory-Game
-Laboratorio acerca de un juego simple de memoria
+Es necesario utilizar un servidor para correrlo
